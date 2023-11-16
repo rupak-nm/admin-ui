@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "copy:assets": "assets public/",
-    "dev": "next dev",
+    "prebuild": "cd packages/icons && yarn && yarn build && cd ../web3-core && yarn && yarn build",
+    "dev": "yarn prebuild && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,7 +13,8 @@
     "lint:strict": "eslint --max-warnings=0 src",
     "typecheck": "tsc --noEmit --incremental false",
     "format": "prettier -w .",
-    "format:check": "prettier -c ."
+    "format:check": "prettier -c .",
+    "packages:update": "git submodule init && git submodule update"
   },
   "dependencies": {
     "@ethersproject/contracts": "5.4.1",
