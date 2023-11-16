@@ -1,0 +1,31 @@
+@use 'design-system/colors';
+@use '../styles/globals.scss';
+
+@import '../components/CustomPagination/index.scss';
+@import '../components/CustomTooltip/index.scss';
+@import '../components/Modal/Modal.scss';
+@import '../components/Skeleton/index.scss';
+
+@import '../components/Header/index.scss';
+@import '../components/Header/AccountDetailsPopover.scss';
+@import '../components/Header/WalletModal.scss';
+@import '../components/Header/NetworkSwitchDropdown.scss';
+
+@import '../components/ForceTxPopup/index.scss';
+
+@import '../components/LiquidityCycleTable/index.scss';
+@import '../components/LiquidityCycleTable/TableColsAndComponents.scss';
+
+@import 'elements/ErrorBoundary/index.scss';
+
+main {
+  section.section {
+    padding-top: 68px;
+    padding-bottom: 270px;
+    background-color: colors.$gray-50;
+
+    &>div {
+      @include globals.layout;
+    }
+  }
+}

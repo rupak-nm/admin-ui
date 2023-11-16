@@ -1,0 +1,57 @@
+$ next build
+- info Loaded env from /Users/rupak/Desktop/NM/frontend/apps/admin-ui/.env
+- info Creating an optimized production build...
+- warn Compiled with warnings
+
+../../node_modules/ws/lib/buffer-util.js
+Module not found: Can't resolve 'bufferutil' in '/Users/rupak/Desktop/NM/frontend/node_modules/ws/lib'
+
+Import trace for requested module:
+../../node_modules/ws/lib/buffer-util.js
+../../node_modules/ws/lib/websocket.js
+../../node_modules/ws/index.js
+./node_modules/@ethersproject/providers/lib/ws.js
+./node_modules/@ethersproject/providers/lib/websocket-provider.js
+./node_modules/@ethersproject/providers/lib/index.js
+./src/components/Providers/index.tsx
+
+../../node_modules/ws/lib/validation.js
+Module not found: Can't resolve 'utf-8-validate' in '/Users/rupak/Desktop/NM/frontend/node_modules/ws/lib'
+
+Import trace for requested module:
+../../node_modules/ws/lib/validation.js
+../../node_modules/ws/lib/receiver.js
+../../node_modules/ws/index.js
+./node_modules/@ethersproject/providers/lib/ws.js
+./node_modules/@ethersproject/providers/lib/websocket-provider.js
+./node_modules/@ethersproject/providers/lib/index.js
+./src/components/Providers/index.tsx
+
+- info Linting and checking validity of types...
+- info Collecting page data...
+- info Generating static pages (0/4)
+- info Generating static pages (1/4)
+- info Generating static pages (2/4)
+- info Generating static pages (3/4)
+- info Generating static pages (4/4)
+- info Finalizing page optimization...
+
+Route (app)                                Size     First Load JS
+┌ ○ /                                      1.15 MB        1.27 MB
+└ ○ /_not-found                            0 B                0 B
++ First Load JS shared by all              77.7 kB
+  ├ chunks/961-a2b8c2d563b99021.js         25.1 kB
+  ├ chunks/bce60fc1-fa100f2e5e4087f8.js    50.5 kB
+  ├ chunks/main-app-0815d37541869c3c.js    212 B
+  └ chunks/webpack-0f6de21e86a566a9.js     1.85 kB
+
+Route (pages)                              Size     First Load JS
+─ ○ /404                                   182 B          75.7 kB
++ First Load JS shared by all              75.5 kB
+  ├ chunks/framework-0857c1c24dbfb1d6.js   45 kB
+  ├ chunks/main-f3d90613cabdf24b.js        28.4 kB
+  ├ chunks/pages/_app-52924524f99094ab.js  195 B
+  └ chunks/webpack-0f6de21e86a566a9.js     1.85 kB
+
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+

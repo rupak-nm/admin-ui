@@ -1,0 +1,30 @@
+@use 'design-system/colors';
+@use 'design-system/shadows';
+@use 'design-system/typography/styles';
+@use 'design-system/typography/weights';
+
+@keyframes shimmer {
+  0% {
+    background-position: -700px 0;
+  }
+
+  100% {
+    background-position: 700px 0;
+  }
+}
+
+div.skeleton.wrapper {
+  animation: shimmer 1.3s linear infinite;
+  background-color: colors.$gray-50;
+  background-image: linear-gradient(to right,
+      colors.$gray-50 0%,
+      #edeef1 20%,
+      colors.$gray-50 40%,
+      colors.$gray-50 100%);
+  background-size: 700px 100%;
+  background-repeat: no-repeat;
+
+  &.circle {
+    border-radius: 50%;
+  }
+}

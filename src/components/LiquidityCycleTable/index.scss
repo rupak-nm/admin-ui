@@ -1,0 +1,53 @@
+@use 'design-system/colors';
+@use 'design-system/shadows';
+@use 'design-system/typography/styles';
+@use 'design-system/typography/weights';
+
+.liquidity.cycle.table.wrapper {
+  background-color: colors.$base-white;
+  border-radius: 12px;
+  border: 1px solid colors.$gray-200;
+  box-shadow: shadows.$sm;
+
+  div.title {
+    padding: 20px 24px;
+
+    h1 {
+      @include styles.text-lg;
+      @include weights.semibold;
+    }
+  }
+
+  div.table {
+    width: 100%;
+    overflow-x: auto;
+    border-width: 1px 0;
+    border: 1px solid colors.$gray-200;
+
+    table {
+      min-width: 960px;
+      width: 100%;
+
+      thead tr th {
+        background-color: colors.$gray-50;
+        padding: 12px 24px;
+        @include weights.medium;
+        color: colors.$gray-600;
+      }
+
+      tbody tr {
+        td {
+          &:first-of-type {
+            width: 342px;
+          }
+
+          padding: 16px 24px;
+        }
+      }
+    }
+  }
+
+  div.pagination.wrapper {
+    padding: 12px 24px 16px;
+  }
+}

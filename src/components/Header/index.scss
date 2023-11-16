@@ -1,0 +1,75 @@
+@use 'design-system/colors';
+@use '../../styles/globals.scss';
+@use 'design-system/typography/styles';
+@use 'design-system/typography/weights';
+@use 'design-system/shadows';
+
+header {
+  background-color: colors.$base-white;
+  color: colors.$black;
+
+  div.wrapper {
+    @include globals.layout;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    padding-bottom: 24px;
+    padding-top: 28px;
+    flex-wrap: wrap;
+
+    a.logo {
+      display: flex;
+      align-items: center;
+
+      svg {
+        height: 34px;
+        width: auto;
+      }
+    }
+
+    div.account {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      position: relative;
+
+      button {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 8px;
+        @include styles.text-md;
+        @include weights.semibold;
+
+        &.connect {
+          border: 1px solid colors.$primary-600;
+          background-color: colors.$primary-600;
+          padding: 10px 18px;
+          color: colors.$base-white;
+
+          &:focus-within {
+            outline: 2px solid colors.$blue-dark-500;
+          }
+        }
+
+        &.details {
+          padding: 10px 16px;
+          color: colors.$gray-700;
+          background-color: transparent;
+          border: 1px solid colors.$gray-300;
+        }
+      }
+
+      @media (max-width: 512px) {
+        flex-direction: row;
+        width: 100%;
+
+        button.connect,
+        button.details {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

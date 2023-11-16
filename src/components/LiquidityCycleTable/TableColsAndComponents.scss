@@ -1,0 +1,107 @@
+@use 'design-system/colors';
+@use 'design-system/shadows';
+@use 'design-system/typography/styles';
+@use 'design-system/typography/weights';
+
+td.cover.name {
+  color: colors.$gray-true-900;
+  @include styles.text-sm;
+}
+
+td.chain.logo {
+  span {
+    display: flex;
+    width: max-content;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+}
+
+td.open.close.cycles {
+  min-width: 320px;
+  @include styles.text-sm;
+  color: colors.$gray-600;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &>p:not(:first-child) {
+    margin-top: 4px;
+  }
+}
+
+td.calendar {
+  a.icon.link {
+    display: flex;
+    width: max-content;
+    border-radius: 8px;
+    padding: 4px;
+    box-shadow: shadows.$md;
+  }
+}
+
+td.action.buttons {
+  min-width: 110px;
+
+  button.action {
+    @include styles.text-sm;
+    @include weights.semibold;
+    color: colors.$primary-700;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    &.accrue {
+      color: colors.$gray-600;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.25;
+    }
+  }
+}
+
+tr.skeleton.row {
+  td {
+    padding: 16px 24px;
+
+    div.skeleton.wrapper {
+      &.name {
+        height: 14px;
+        width: 176px;
+        border-radius: 2px;
+      }
+
+      &.logo {
+        height: 24px;
+        width: 24px;
+      }
+
+      &.open {
+        height: 20px;
+        width: 256px;
+      }
+
+      &.close {
+        height: 20px;
+        width: 256px;
+        margin-top: 4px;
+      }
+
+      &.calendar {
+        height: 28px;
+        width: 28px;
+        border-radius: 8px;
+      }
+
+      &.button {
+        height: 20px;
+        width: 56px;
+        border-radius: 2px;
+      }
+    }
+  }
+}

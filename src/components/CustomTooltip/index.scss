@@ -1,0 +1,43 @@
+@use 'design-system/colors';
+@use 'design-system/shadows';
+@use 'design-system/typography/styles';
+@use 'design-system/typography/weights';
+
+.TooltipTrigger {
+  width: max-content;
+  padding: 0;
+  background-color: transparent;
+}
+
+.TooltipContent {
+  box-shadow: shadows.$lg;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: colors.$base-white;
+
+  div.content {
+    @include styles.text-xs;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &>p:not(:first-child) {
+      margin-top: 4px;
+    }
+
+    p.title {
+      @include weights.semibold;
+      color: colors.$gray-700;
+    }
+
+    p.desc {
+      color: colors.$gray-500;
+    }
+  }
+
+  .TooltipArrow {
+    fill: colors.$white;
+  }
+}

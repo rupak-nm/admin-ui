@@ -1,0 +1,102 @@
+@use 'design-system/colors';
+@use 'design-system/shadows';
+@use 'design-system/typography/styles';
+@use 'design-system/typography/weights';
+
+.force.tx.DialogContent {
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 32px 40px;
+  width: max-content;
+
+  @media (max-width: 849px) {
+    max-width: 90%;
+  }
+
+  div.title {
+    @include styles.text-lg;
+    @include weights.semibold;
+    color: colors.$black;
+  }
+
+  div.desc {
+    max-height: 216px;
+    margin-top: 16px;
+    overflow-y: auto;
+    word-break: break-all;
+    @include styles.text-sm;
+
+    div.info {
+      p {
+        @include styles.text-md;
+        color: colors.$gray-neutral-700;
+      }
+    }
+
+    div.message {
+      p {
+        color: colors.$error-800;
+      }
+    }
+
+    div.reason {
+      color: colors.$error-800;
+
+      p {
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+
+  hr {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    height: 1px;
+    color: colors.$gray-600;
+  }
+
+  div.suggestion {
+    margin-bottom: 20px;
+
+    p {
+      color: colors.$gray-neutral-700;
+      @include styles.text-sm;
+      line-height: 20px;
+    }
+  }
+
+  div.buttons {
+    display: flex;
+    justify-content: flex-end;
+    @include styles.text-md;
+
+    button.cancel {
+      border: 1px solid colors.$gray-400;
+      color: colors.$gray-400;
+
+      &:hover {
+        background-color: rgba(colors.$gray-400, 0.25);
+      }
+
+      margin-right: 24px;
+      width: auto;
+      border-radius: 4px;
+      padding: 12px;
+      @include weights.medium;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+    }
+
+    button.send {
+      background-color: colors.$error-600;
+      color: colors.$base-white;
+      width: auto;
+      border-radius: 4px;
+      padding: 12px;
+      @include weights.medium;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+    }
+  }
+}

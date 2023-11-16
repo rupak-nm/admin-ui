@@ -1,0 +1,41 @@
+@use 'design-system/colors';
+
+//Elements
+@import "../elements/Icon.scss";
+
+html,
+body {
+  height: 100%;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  font-variant-numeric: tabular-nums;
+}
+
+* {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 p,
+  span {
+    color: colors.$black;
+    margin: 0;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+  }
+}
+
+/********* LAYOUT *********/
+@mixin layout {
+  max-width: 68.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}

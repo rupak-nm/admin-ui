@@ -1,0 +1,80 @@
+@use 'design-system/typography/styles';
+@use 'design-system/typography/weights';
+@use 'design-system/colors';
+@use 'design-system/shadows';
+
+div[data-radix-popper-content-wrapper] .PopoverContent {
+  padding: 0;
+  border: none;
+
+  div.dropdown.content {
+    border-radius: 8px;
+    box-shadow: shadows.$lg;
+    background-color: colors.$white;
+    border: 1px solid colors.$gray-200;
+    width: 240px;
+
+    *,
+    button,
+    svg,
+    a {
+      color: colors.$gray-700 !important;
+    }
+
+    div.item {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+
+      @include styles.text-sm;
+      @include weights.medium;
+
+      button,
+      a {
+        padding: 0 6px;
+        display: flex;
+        background-color: transparent;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    button.logout {
+      border-top: 1px solid colors.$gray-200;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 16px;
+      cursor: pointer;
+      width: 100%;
+      @include styles.text-sm;
+      @include weights.medium;
+      border-radius: 0;
+
+      .text {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      &:hover {
+        background-color: colors.$gray-100;
+      }
+    }
+  }
+
+  @media (max-width: 512px) {
+    width: 100% !important;
+
+    div.dropdown.content {
+      width: var(--radix-popover-trigger-width);
+    }
+  }
+}
