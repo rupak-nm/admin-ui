@@ -17,8 +17,9 @@
     "paths": {
       "@/*": ["./src/*"],
       "~/*": ["./public/*"],
-      "elements/*": ["../../packages/elements/*"],
-      "icons/*": ["../../packages/icons/*"]
+      "elements/*": ["packages/elements/*"],
+      "icons": ["packages/icons"],
+      "design-system/*": ["packages/design-system/*"],
     },
     "incremental": true,
     "plugins": [

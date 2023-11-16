@@ -28,20 +28,21 @@
   },
   "devDependencies": {
     "@ethersproject/providers": "5.5.1",
+    "@types/node": "20.9.0",
     "@types/react": "18.2.15",
     "@web3-react/core": "6.1.9",
     "@web3-react/injected-connector": "6.0.7",
     "assets": "*",
     "bignumber.js": "9.0.2",
     "design-system": "*",
+    "elements": "*",
     "eslint": "8.4.1",
     "eslint-config-next": "13.4.12",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-unused-imports": "2.0.0",
     "icons": "*",
     "sass": "1.64.2",
-    "typescript": "^5.2.2",
-    "elements": "*"
+    "typescript": "^5.2.2"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
